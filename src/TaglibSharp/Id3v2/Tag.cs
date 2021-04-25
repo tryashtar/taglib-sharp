@@ -499,11 +499,6 @@ namespace TagLib.Id3v2
 		///    <paramref name="number" /> is a part of, or zero if
 		///    <paramref name="number" /> is not part of a set.
 		/// </param>
-		/// <param name="format">
-		///    A <see cref="string" /> value representing the format
-		///    to be used to repreesent the <paramref name="number"/>.
-		///    Default: simple decimal number ("0").
-		/// </param>
 		/// <remarks>
 		///    If both <paramref name="number" /> and <paramref
 		///    name="count" /> are equal to zero, the value will be
@@ -518,8 +513,9 @@ namespace TagLib.Id3v2
 		/// <exception cref="ArgumentException">
 		///    <paramref name="ident" /> is not exactly four bytes long.
 		/// </exception>
-		public void SetNumberFrame (ByteVector ident, uint number, uint count, string format = "0")
+		public void SetNumberFrame (ByteVector ident, uint number, uint count)
 		{
+			string format = new String ('0', count.ToString ().Length);
 			if (ident == null)
 				throw new ArgumentNullException (nameof (ident));
 
@@ -995,7 +991,7 @@ namespace TagLib.Id3v2
 				RemoveFrames (FrameType.TDAT);
 			}
 
-			tdrc.Text = new [] { tdrc_text.ToString () };
+			tdrc.Text = new[] { tdrc_text.ToString () };
 		}
 
 		#endregion
@@ -1048,7 +1044,7 @@ namespace TagLib.Id3v2
 			if (text == null)
 				return 0;
 
-			string[] values = text.Split (new [] { '/' },
+			string[] values = text.Split (new[] { '/' },
 				index + 2);
 
 			if (values.Length < index + 1)
@@ -1687,7 +1683,7 @@ namespace TagLib.Id3v2
 		/// </remarks>
 		public override uint Track {
 			get { return GetTextAsUInt32 (FrameType.TRCK, 0); }
-			set { SetNumberFrame (FrameType.TRCK, value, TrackCount, "00"); }
+			set { SetNumberFrame (FrameType.TRCK, value, TrackCount); }
 		}
 
 		/// <summary>
