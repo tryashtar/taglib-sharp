@@ -299,8 +299,10 @@ namespace TagLib.Ape
 
 			if (number == 0 && count == 0)
 				RemoveItem (key);
-			else if (count != 0)
-				SetValue (key, string.Format (CultureInfo.InvariantCulture, "{0}/{1}", number, count));
+			else if (count != 0) {
+				string format = new String ('0', count.ToString ().Length);
+				SetValue (key, string.Format (CultureInfo.InvariantCulture, "{0:" + format + "}/{1}", number, count));
+			}
 			else
 				SetValue (key, number.ToString (CultureInfo.InvariantCulture));
 		}
