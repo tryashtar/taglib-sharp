@@ -195,8 +195,11 @@ namespace TagLib.Id3v2
 			// Handle URL LInk frames differently
 			if (ident[0] == 'W')
 				frame = UrlLinkFrame.Get (this, ident, false);
-			else
+			else {
 				frame = TextInformationFrame.Get (this, ident, false);
+				if (frame != null && ReadArtistDelimiters != null)
+					((TextInformationFrame)frame).ReadArtistDelimiters = ReadArtistDelimiters;
+			}
 
 			string result = frame?.ToString ();
 			return string.IsNullOrEmpty (result) ? null : result;
@@ -453,6 +456,8 @@ namespace TagLib.Id3v2
 
 			frame.Text = text;
 			frame.TextEncoding = DefaultEncoding;
+			if (WriteArtistDelimiter != null)
+				frame.WriteArtistDelimiter = WriteArtistDelimiter;
 		}
 
 		/// <summary>
@@ -691,6 +696,15 @@ namespace TagLib.Id3v2
 				header.MajorVersion = value;
 			}
 		}
+
+		/// <summary>
+		/// Delimiter applied to frames
+		/// </summary>
+		public string WriteArtistDelimiter = null;
+		/// <summary>
+		/// Delimiter applied to frames
+		/// </summary>
+		public string[] ReadArtistDelimiters = null;
 
 		#endregion
 
@@ -1021,7 +1035,8 @@ namespace TagLib.Id3v2
 		string[] GetTextAsArray (ByteVector ident)
 		{
 			var frame = TextInformationFrame.Get (this, ident, false);
-
+			if (frame != null && ReadArtistDelimiters != null)
+				frame.ReadArtistDelimiters = ReadArtistDelimiters;
 			return frame == null ? new string[0] : frame.Text;
 		}
 

@@ -575,6 +575,15 @@ namespace TagLib.Id3v2
 			set { encoding = value; }
 		}
 
+		/// <summary>
+		/// Delimiter for artist tags
+		/// </summary>
+		public string WriteArtistDelimiter = "/";
+		/// <summary>
+		/// Delimiter for artist tags
+		/// </summary>
+		public string[] ReadArtistDelimiters = new[] { "/", ";" };
+
 		#endregion
 
 
@@ -876,7 +885,7 @@ namespace TagLib.Id3v2
 					FrameId == FrameType.TPE2 ||
 					FrameId == FrameType.TPE3 ||
 					FrameId == FrameType.TPE4) {
-					field_list.AddRange (value.Split ('/'));
+					field_list.AddRange (value.Split (ReadArtistDelimiters, StringSplitOptions.None));
 				} else if (FrameId == FrameType.TCON) {
 					while (value.Length > 1 && value[0] == '(') {
 						int closing = value.IndexOf (')');
@@ -973,7 +982,7 @@ namespace TagLib.Id3v2
 
 				v.Add (ByteVector.FromString (data.ToString (), encoding));
 			} else {
-				v.Add (ByteVector.FromString (string.Join ("/", text), encoding));
+				v.Add (ByteVector.FromString (string.Join (WriteArtistDelimiter, text), encoding));
 			}
 
 			return v;
