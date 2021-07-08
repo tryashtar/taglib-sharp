@@ -456,8 +456,6 @@ namespace TagLib.Id3v2
 
 			frame.Text = text;
 			frame.TextEncoding = DefaultEncoding;
-			if (WriteArtistDelimiter != null)
-				frame.WriteArtistDelimiter = WriteArtistDelimiter;
 		}
 
 		/// <summary>
@@ -625,6 +623,13 @@ namespace TagLib.Id3v2
 				if ((frame.Flags &
 					FrameFlags.TagAlterPreservation) != 0)
 					continue;
+
+				if (frame is TextInformationFrame tif) {
+					if (WriteArtistDelimiter != null)
+						tif.WriteArtistDelimiter = WriteArtistDelimiter;
+					if (ReadArtistDelimiters != null)
+						tif.ReadArtistDelimiters = ReadArtistDelimiters;
+				}
 
 				try {
 					tag_data.Add (frame.Render (header.MajorVersion));
@@ -1009,7 +1014,7 @@ namespace TagLib.Id3v2
 				RemoveFrames (FrameType.TDAT);
 			}
 
-			tdrc.Text = new [] { tdrc_text.ToString () };
+			tdrc.Text = new[] { tdrc_text.ToString () };
 		}
 
 		#endregion
@@ -1035,8 +1040,10 @@ namespace TagLib.Id3v2
 		string[] GetTextAsArray (ByteVector ident)
 		{
 			var frame = TextInformationFrame.Get (this, ident, false);
-			if (frame != null && ReadArtistDelimiters != null)
+			if (frame != null && ReadArtistDelimiters != null) {
 				frame.ReadArtistDelimiters = ReadArtistDelimiters;
+				frame.ReRead ();
+			}
 			return frame == null ? new string[0] : frame.Text;
 		}
 
@@ -1063,7 +1070,7 @@ namespace TagLib.Id3v2
 			if (text == null)
 				return 0;
 
-			string[] values = text.Split (new [] { '/' },
+			string[] values = text.Split (new[] { '/' },
 				index + 2);
 
 			if (values.Length < index + 1)

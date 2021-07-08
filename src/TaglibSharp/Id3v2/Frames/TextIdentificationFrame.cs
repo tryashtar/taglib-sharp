@@ -829,6 +829,7 @@ namespace TagLib.Id3v2
 		protected override void ParseFields (ByteVector data, byte version)
 		{
 			raw_data = data;
+			original_raw_data = data;
 			raw_version = version;
 
 			// read the string data type (the first byte of the
@@ -917,6 +918,15 @@ namespace TagLib.Id3v2
 				field_list.RemoveAt (field_list.Count - 1);
 
 			text_fields = field_list.ToArray ();
+		}
+
+		private ByteVector original_raw_data;
+		/// <summary>
+		/// hack
+		/// </summary>
+		public void ReRead() {
+			raw_data = original_raw_data;
+			ParseRawData ();
 		}
 
 		/// <summary>
