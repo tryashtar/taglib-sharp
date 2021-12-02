@@ -195,8 +195,11 @@ namespace TagLib.Id3v2
 			// Handle URL LInk frames differently
 			if (ident[0] == 'W')
 				frame = UrlLinkFrame.Get (this, ident, false);
-			else
+			else {
 				frame = TextInformationFrame.Get (this, ident, false);
+				if (frame != null && ReadArtistDelimiters != null)
+					((TextInformationFrame)frame).ReadArtistDelimiters = ReadArtistDelimiters;
+			}
 
 			string result = frame?.ToString ();
 			return string.IsNullOrEmpty (result) ? null : result;
@@ -621,6 +624,13 @@ namespace TagLib.Id3v2
 					FrameFlags.TagAlterPreservation) != 0)
 					continue;
 
+				if (frame is TextInformationFrame tif) {
+					if (WriteArtistDelimiter != null)
+						tif.WriteArtistDelimiter = WriteArtistDelimiter;
+					if (ReadArtistDelimiters != null)
+						tif.ReadArtistDelimiters = ReadArtistDelimiters;
+				}
+
 				try {
 					tag_data.Add (frame.Render (header.MajorVersion));
 				} catch (NotImplementedException) {
@@ -691,6 +701,15 @@ namespace TagLib.Id3v2
 				header.MajorVersion = value;
 			}
 		}
+
+		/// <summary>
+		/// Delimiter applied to frames
+		/// </summary>
+		public string WriteArtistDelimiter = null;
+		/// <summary>
+		/// Delimiter applied to frames
+		/// </summary>
+		public string[] ReadArtistDelimiters = null;
 
 		#endregion
 
@@ -995,7 +1014,7 @@ namespace TagLib.Id3v2
 				RemoveFrames (FrameType.TDAT);
 			}
 
-			tdrc.Text = new [] { tdrc_text.ToString () };
+			tdrc.Text = new[] { tdrc_text.ToString () };
 		}
 
 		#endregion
@@ -1021,7 +1040,10 @@ namespace TagLib.Id3v2
 		string[] GetTextAsArray (ByteVector ident)
 		{
 			var frame = TextInformationFrame.Get (this, ident, false);
-
+			if (frame != null && ReadArtistDelimiters != null) {
+				frame.ReadArtistDelimiters = ReadArtistDelimiters;
+				frame.ReRead ();
+			}
 			return frame == null ? new string[0] : frame.Text;
 		}
 
@@ -1048,7 +1070,7 @@ namespace TagLib.Id3v2
 			if (text == null)
 				return 0;
 
-			string[] values = text.Split (new [] { '/' },
+			string[] values = text.Split (new[] { '/' },
 				index + 2);
 
 			if (values.Length < index + 1)
