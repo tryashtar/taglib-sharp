@@ -62,7 +62,7 @@ namespace TagLib.Id3v2
 		public ChapterFrame (string id, string title)
 			: this(id)
 		{
-			SubFrames.Add(new TextInformationFrame("TIT2") { Text = new[] { title } });
+			SubFrames.Add(new TextInformationFrame("TIT2", StringType.UTF16) { Text = new[] { title } });
 		}
 
 		/// <summary>
