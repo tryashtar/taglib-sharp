@@ -12,7 +12,7 @@
 // Copyright (C) 2005, 2007 Brian Nickel
 // Copyright (C) 2006 Novell, Inc.
 // Copyright (C) 2002,2003 Scott Wheeler (Original Implementation)
-// 
+//
 // This library is free software; you can redistribute it and/or modify
 // it  under the terms of the GNU Lesser General Public License version
 // 2.1 as published by the Free Software Foundation.
@@ -56,10 +56,10 @@ namespace TagLib
 		Average = 2,
 
 		/// <summary>
-		///    Use the <see cref="PictureLazy"/> class in the 
-		///    the property <see cref="Tag.Pictures"/>. 
+		///    Use the <see cref="PictureLazy"/> class in the
+		///    the property <see cref="Tag.Pictures"/>.
 		///    This will avoid loading picture content when reading the Tag.
-		///    Picture will be read lazily, when the picture content is 
+		///    Picture will be read lazily, when the picture content is
 		///    accessed.
 		/// </summary>
 		PictureLazy = 4
@@ -148,7 +148,7 @@ namespace TagLib
 		///    methods.</para>
 		///    <para>If the resolver returns a new <see cref="File" />,
 		///    it will instantly be returned, by <see
-		///    cref="Create(string)" />. If it returns <see 
+		///    cref="Create(string)" />. If it returns <see
 		///    langword="null" />, <see cref="Create(string)" /> will
 		///    continue to process. If the resolver throws an exception
 		///    it will be uncaught.</para>
@@ -487,7 +487,7 @@ namespace TagLib
 		/// </param>
 		/// <remarks>
 		///    In order to remove all tags from a file, pass <see
-		///    cref="TagTypes.AllTags" /> as <paramref name="types" />.
+		///    cref="TagLib.TagTypes.AllTags" /> as <paramref name="types" />.
 		/// </remarks>
 		public abstract void RemoveTags (TagTypes types);
 
@@ -526,15 +526,15 @@ namespace TagLib
 		///   TagLib.Id3v2.Tag id3 = file.GetTag (TagLib.TagTypes.Id3v2, true);
 		///   if (id3 != null)
 		///      id3.SetTextFrame ("TMOO", moods);
-		///   
+		///
 		///   TagLib.Asf.Tag asf = file.GetTag (TagLib.TagTypes.Asf, true);
 		///   if (asf != null)
 		///      asf.SetDescriptorStrings (moods, "WM/Mood", "Mood");
-		///   
+		///
 		///   TagLib.Ape.Tag ape = file.GetTag (TagLib.TagTypes.Ape);
 		///   if (ape != null)
 		///      ape.SetValue ("MOOD", moods);
-		///      
+		///
 		///   // Whatever tag types you want...
 		///}</code>
 		/// </example>
@@ -554,7 +554,7 @@ namespace TagLib
 		/// </returns>
 		/// <remarks>
 		///    <para>This class merely accesses the tag if it exists.
-		///    <see cref="GetTag(TagTypes,bool)" /> provides the option
+		///    <see cref="GetTag(TagLib.TagTypes,bool)" /> provides the option
 		///    of adding the tag to the current instance if it does not
 		///    exist.</para>
 		///    <para>It is safe to assume that if <see langword="null"
@@ -572,23 +572,23 @@ namespace TagLib
 		///      if (f != null)
 		///         return f.FieldList.ToArray ();
 		///   }
-		///   
+		///
 		///   TagLib.Asf.Tag asf = file.GetTag (TagLib.TagTypes.Asf);
 		///   if (asf != null) {
 		///      string [] value = asf.GetDescriptorStrings ("WM/Mood", "Mood");
 		///      if (value.Length &gt; 0)
 		///         return value;
 		///   }
-		///   
+		///
 		///   TagLib.Ape.Tag ape = file.GetTag (TagLib.TagTypes.Ape);
 		///   if (ape != null) {
 		///      Item item = ape.GetItem ("MOOD");
 		///      if (item != null)
 		///         return item.ToStringArray ();
 		///   }
-		///      
+		///
 		///   // Whatever tag types you want...
-		///   
+		///
 		///   return new string [] {};
 		///}</code>
 		/// </example>
@@ -831,7 +831,7 @@ namespace TagLib
 			*/
 
 			// Save the location of the current read pointer.  We
-			// will restore the position using Seek() before all 
+			// will restore the position using Seek() before all
 			// returns.
 
 			long original_position = file_stream.Position;
@@ -985,7 +985,7 @@ namespace TagLib
 		/// <summary>
 		///   Inserts a specified block-size into the file repesented
 		///   by the current instance at a specified location. Former
-		///   data at this location is not overwriten and may then 
+		///   data at this location is not overwriten and may then
 		///   contain random content.
 		/// </summary>
 		/// <param name="size">
@@ -999,8 +999,8 @@ namespace TagLib
 		/// <remarks>
 		///    This method is usefull to reserve some space in the file.
 		///    To insert or replace defined data blocks, use <see
-		///    cref="Insert(ByteVector,long)" /> or 
-		///    <see cref="Insert(ByteVector,long,long)"/> 
+		///    cref="Insert(ByteVector,long)" /> or
+		///    <see cref="Insert(ByteVector,long,long)"/>
 		/// </remarks>
 		public void Insert (long size, long start)
 		{
@@ -1313,7 +1313,7 @@ namespace TagLib
 		///    file type recognition stack.
 		/// </param>
 		/// <remarks>
-		///    A <see cref="FileTypeResolver" /> adds support for 
+		///    A <see cref="FileTypeResolver" /> adds support for
 		///    recognizing a file type outside of the standard mime-type
 		///    methods.
 		/// </remarks>
@@ -1330,7 +1330,7 @@ namespace TagLib
 		#region Private/Protected Methods
 
 		/// <summary>
-		///    Prepare to Save the file. Thismust be called at the begining 
+		///    Prepare to Save the file. Thismust be called at the begining
 		///    of every File.Save() method.
 		/// </summary>
 		protected void PreSave ()
@@ -1361,7 +1361,7 @@ namespace TagLib
 		/// <param name="data">
 		///    A <see cref="ByteVector" /> object containing the data to
 		///    insert into the file. if null, no data is writen to the
-		///    file and the block is just inserted without overwriting the 
+		///    file and the block is just inserted without overwriting the
 		///    former data at the given location.
 		/// </param>
 		/// <param name="size">
@@ -1429,8 +1429,8 @@ namespace TagLib
 			byte[] buffer;
 			byte[] about_to_overwrite;
 
-			// This is basically a special case of the loop below.  
-			// Here we're just doing the same steps as below, but 
+			// This is basically a special case of the loop below.
+			// Here we're just doing the same steps as below, but
 			// since we aren't using the same buffer size -- instead
 			// we're using the tag size -- this has to be handled as
 			// a special case.  We're also using File::writeBlock()
@@ -1454,12 +1454,12 @@ namespace TagLib
 				about_to_overwrite.Length);
 
 			// Ok, here's the main loop.  We want to loop until the
-			// read fails, which means that we hit the end of the 
+			// read fails, which means that we hit the end of the
 			// file.
 
 			while (buffer_length != 0) {
 				// Seek to the current read position and read
-				// the data that we're about to overwrite. 
+				// the data that we're about to overwrite.
 				// Appropriately increment the readPosition.
 
 				file_stream.Position = read_position;
@@ -1647,7 +1647,7 @@ namespace TagLib
 		///         return;
 		///
 		///      Gnome.Vfs.Vfs.Initialize ();
-		///      
+		///
 		///      try {
 		///          TagLib.File file = TagLib.File.Create (
 		///             new VfsFileAbstraction (args [0]));
@@ -1688,24 +1688,24 @@ namespace TagLib
 		///import Gnome.Vfs from "gnome-vfs-sharp"
 		///
 		///class VfsFileAbstraction (TagLib.File.IFileAbstraction):
-		///        
+		///
 		///        _name as string
-		///        
+		///
 		///        def constructor(file as string):
 		///                _name = file
-		///        
+		///
 		///        Name:
 		///                get:
 		///                        return _name
-		///                
+		///
 		///        ReadStream:
 		///                get:
 		///                        return VfsStream(_name, FileMode.Open)
-		///                
+		///
 		///        WriteStream:
 		///                get:
 		///                        return VfsStream(_name, FileMode.Open)
-		///        
+		///
 		///if len(argv) == 1:
 		///        Vfs.Initialize()
 		///
@@ -1722,7 +1722,7 @@ namespace TagLib
 			///    implementation.
 			/// </summary>
 			/// <value>
-			///    A <see cref="string" /> object containing the 
+			///    A <see cref="string" /> object containing the
 			///    name or identifier used by the implementation.
 			/// </value>
 			/// <remarks>

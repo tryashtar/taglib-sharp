@@ -1,5 +1,5 @@
 //
-// File.cs: Provides tagging and properties support for Apple's AIFF 
+// File.cs: Provides tagging and properties support for Apple's AIFF
 // files.
 //
 // Author:
@@ -268,7 +268,7 @@ namespace TagLib.Aiff
 				// If the data size changed update the aiff size.
 				if (data.Count - length != 0 &&
 					tag_start <= aiff_size) {
-					// Depending, if a Tag has been added or removed, 
+					// Depending, if a Tag has been added or removed,
 					// the length needs to be adjusted
 					if (tag == null) {
 						length -= 16;
@@ -294,7 +294,7 @@ namespace TagLib.Aiff
 		/// </param>
 		/// <remarks>
 		///    In order to remove all tags from a file, pass <see
-		///    cref="TagTypes.AllTags" /> as <paramref name="types" />.
+		///    cref="TagLib.TagTypes.AllTags" /> as <paramref name="types" />.
 		/// </remarks>
 		public override void RemoveTags (TagTypes types)
 		{

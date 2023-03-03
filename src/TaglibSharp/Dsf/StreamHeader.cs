@@ -1,5 +1,5 @@
 //
-// StreamHeader.cs: Provides tagging and properties support for the DSD   
+// StreamHeader.cs: Provides tagging and properties support for the DSD
 // (Direct Stream Digital) DSF properties.
 //
 // Author:
@@ -57,13 +57,13 @@ namespace TagLib.Dsf
 		/// </summary>
 		/// <remarks>
 		///    This value is stored in bytes (20-23).
-		///    1: mono 
-		///    2:stereo 
-		///    3:3 channels 
-		///    4: quad 
-		///    5: 4 channels 
-		///    6: 5 channels 
-		///    7: 5.1 channels 
+		///    1: mono
+		///    2:stereo
+		///    3:3 channels
+		///    4: quad
+		///    5: 4 channels
+		///    6: 5 channels
+		///    7: 5.1 channels
 		/// </remarks>
 		readonly ushort channel_type;
 
@@ -82,7 +82,7 @@ namespace TagLib.Dsf
 		/// </summary>
 		/// <remarks>
 		///    This value is stored in bytes (28-31).
-		///    the sample rate at which the sound is to be played back, 
+		///    the sample rate at which the sound is to be played back,
 		///    in Hz: 2822400, 5644800
 		/// </remarks>
 		readonly ulong sample_rate;
@@ -162,7 +162,7 @@ namespace TagLib.Dsf
 		/// </exception>
 		/// <exception cref="CorruptFileException">
 		///    <paramref name="data" /> does not begin with <see
-		///    cref="FileIdentifier" /> 
+		///    cref="FileIdentifier" />
 		/// </exception>
 		public StreamHeader (ByteVector data, long streamLength)
 		{
@@ -213,7 +213,7 @@ namespace TagLib.Dsf
 		///    instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="MediaTypes.Audio" />.
+		///    Always <see cref="TagLib.MediaTypes.Audio" />.
 		/// </value>
 		public MediaTypes MediaTypes {
 			get { return MediaTypes.Audio; }

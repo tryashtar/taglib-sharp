@@ -230,7 +230,7 @@ namespace TagLib.Matroska
 		/// </param>
 		/// <remarks>
 		///    In order to remove all tags from a file, pass <see
-		///    cref="TagTypes.AllTags" /> as <paramref name="types" />.
+		///    cref="TagLib.TagTypes.AllTags" /> as <paramref name="types" />.
 		/// </remarks>
 		public override void RemoveTags (TagTypes types)
 		{
@@ -340,7 +340,7 @@ namespace TagLib.Matroska
 					element = new EBMLreader (this, offset);
 				} catch (Exception ex) {
 					// Sometimes, the file has zero padding at the end
-					if (hasSegment) break; // Avoid crash 
+					if (hasSegment) break; // Avoid crash
 					throw ex;
 				}
 
@@ -1123,7 +1123,7 @@ namespace TagLib.Matroska
 			// Update Segment EBML data-size, resize to 8 (take space on the first reserved Void)
 			var poffset = ebml_segm.WriteDataSize ();
 
-			// Adapt first Void dimensions to the space that has been taken by the WriteDataSize 
+			// Adapt first Void dimensions to the space that has been taken by the WriteDataSize
 			if (poffset != 0)
 				segm_list[0] = new EBMLreader (ebml_segm, ebml_segm.DataOffset, MatroskaID.Void, (ulong)((long)segm_list[0].Size - poffset));
 

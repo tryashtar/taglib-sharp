@@ -9,7 +9,7 @@
 //
 // Copyright (C) 2005-2007 Brian Nickel
 // Copyright (C) 2003 by Scott Wheeler (Original Implementation)
-// 
+//
 // This library is free software; you can redistribute it and/or modify
 // it  under the terms of the GNU Lesser General Public License version
 // 2.1 as published by the Free Software Foundation.
@@ -425,11 +425,11 @@ namespace TagLib.Mpeg
 		/// </value>
 		/// <remarks>
 		///    If <see cref="XingHeader" /> is equal to <see
-		///    cref="XingHeader.Unknown" /> and <see
+		///    cref="TagLib.Mpeg.XingHeader.Unknown" /> and <see
 		///    cref="SetStreamLength" /> has not been called, this value
 		///    will not be correct.
 		///    If <see cref="VBRIHeader" /> is equal to <see
-		///    cref="VBRIHeader.Unknown" /> and <see
+		///    cref="TagLib.Mpeg.VBRIHeader.Unknown" /> and <see
 		///    cref="SetStreamLength" /> has not been called, this value
 		///    will not be correct.
 		/// </remarks>
@@ -512,7 +512,7 @@ namespace TagLib.Mpeg
 		///    instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="MediaTypes.Audio" />.
+		///    Always <see cref="TagLib.MediaTypes.Audio" />.
 		/// </value>
 		public MediaTypes MediaTypes {
 			get { return MediaTypes.Audio; }
@@ -586,7 +586,7 @@ namespace TagLib.Mpeg
 		/// <value>
 		///    A <see cref="XingHeader" /> object containing the Xing
 		///    header found in the audio represented by the current
-		///    instance, or <see cref="XingHeader.Unknown" /> if no
+		///    instance, or <see cref="TagLib.Mpeg.XingHeader.Unknown" /> if no
 		///    header was found.
 		/// </value>
 		public XingHeader XingHeader {
@@ -600,7 +600,7 @@ namespace TagLib.Mpeg
 		/// <value>
 		///    A <see cref="VBRIHeader" /> object containing the VBRI
 		///    header found in the audio represented by the current
-		///    instance, or <see cref="VBRIHeader.Unknown" /> if no
+		///    instance, or <see cref="TagLib.Mpeg.VBRIHeader.Unknown" /> if no
 		///    header was found.
 		/// </value>
 		public VBRIHeader VBRIHeader {

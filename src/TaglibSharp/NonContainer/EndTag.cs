@@ -6,7 +6,7 @@
 //   Brian Nickel (brian.nickel@gmail.com)
 //
 // Copyright (C) 2007 Brian Nickel
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the
 // "Software"), to deal in the Software without restriction, including
@@ -14,10 +14,10 @@
 // distribute, sublicense, and/or sell copies of the Software, and to
 // permit persons to whom the Software is furnished to do so, subject to
 // the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be
 // included in all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 // EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
 // MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -184,7 +184,7 @@ namespace TagLib.NonContainer
 		/// </param>
 		/// <remarks>
 		///    In order to remove all tags from a file, pass <see
-		///    cref="TagTypes.AllTags" /> as <paramref name="types" />.
+		///    cref="TagLib.TagTypes.AllTags" /> as <paramref name="types" />.
 		/// </remarks>
 		public void RemoveTags (TagTypes types)
 		{
@@ -203,9 +203,9 @@ namespace TagLib.NonContainer
 		/// <param name="type">
 		///    A <see cref="TagTypes" /> value specifying the type of
 		///    tag to add to the current instance. At the time of this
-		///    writing, this is limited to <see cref="TagTypes.Ape" />,
-		///    <see cref="TagTypes.Id3v1" />, and <see
-		///    cref="TagTypes.Id3v2" />.
+		///    writing, this is limited to <see cref="TagLib.TagTypes.Ape" />,
+		///    <see cref="TagLib.TagTypes.Id3v1" />, and <see
+		///    cref="TagLib.TagTypes.Id3v2" />.
 		/// </param>
 		/// <param name="copy">
 		///    A <see cref="TagLib.Tag" /> to copy values from using
@@ -313,7 +313,7 @@ namespace TagLib.NonContainer
 		/// <returns>
 		///    A <see cref="TagLib.TagTypes" /> value specifying the
 		///    type of tag found at the specified position, or <see
-		///    cref="TagTypes.None" /> if no tag was found.
+		///    cref="TagLib.TagTypes.None" /> if no tag was found.
 		/// </returns>
 		TagTypes ReadTagInfo (ref long position)
 		{

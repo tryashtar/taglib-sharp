@@ -101,7 +101,7 @@ namespace TagLib.Matroska
 		}
 
 		/// <summary>
-		/// Return a Tag of a certain Target type.  
+		/// Return a Tag of a certain Target type.
 		/// </summary>
 		/// <param name="create">Create one if it doesn't exist yet.</param>
 		/// <param name="targetType">Target Type Value.</param>
@@ -117,7 +117,7 @@ namespace TagLib.Matroska
 
 
 		/// <summary>
-		/// Return the Tag representing the Album the medium belongs to.  
+		/// Return the Tag representing the Album the medium belongs to.
 		/// </summary>
 		/// <param name="create">Create one if it doesn't exist yet.</param>
 		/// <returns>the Tag representing the collection</returns>
@@ -242,7 +242,7 @@ namespace TagLib.Matroska
 		}
 
 		/// <summary>
-		/// Create or overwrite the actual tags of a given name/sub-name by new values. 
+		/// Create or overwrite the actual tags of a given name/sub-name by new values.
 		/// </summary>
 		/// <param name="key">Tag Name</param>
 		/// <param name="subkey">Nested SimpleTag to find (if non null) Tag name</param>
@@ -314,7 +314,7 @@ namespace TagLib.Matroska
 		/// <param name="subkey">Nested SimpleTag to find (if non null) Tag name</param>
 		/// <param name="recu">Also search in parent Tag if true (default: true)</param>
 		/// <returns>Array of values. Nested sub-list are represented by a semicolon-
-		/// separated string 
+		/// separated string
 		/// </returns>
 		public string[] Get (string key, string subkey = null, bool recu = true)
 		{
@@ -402,7 +402,7 @@ namespace TagLib.Matroska
 		#region Properties
 
 		/// <summary>
-		/// Retrieve a list of Matroska Tags 
+		/// Retrieve a list of Matroska Tags
 		/// </summary>
 		public Tags Tags { private set; get; }
 
@@ -454,7 +454,7 @@ namespace TagLib.Matroska
 
 		/// <summary>
 		///    Gets the Matroska Target Type Value of this Tag.
-		///    This value can be change with the <see cref="TargetType"/> property. 
+		///    This value can be change with the <see cref="TargetType"/> property.
 		/// </summary>
 		public ushort TargetTypeValue {
 			get {
@@ -503,7 +503,7 @@ namespace TagLib.Matroska
 		///    Gets the tag types contained in the current instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="TagTypes.Matroska" />.
+		///    Always <see cref="TagLib.TagTypes.Matroska" />.
 		/// </value>
 		public override TagTypes TagTypes {
 			get { return TagTypes.Matroska; }
@@ -538,12 +538,12 @@ namespace TagLib.Matroska
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the sort name of 
+		///    A <see cref="string" /> containing the sort name of
 		///    the Track Title of the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
 		/// <remarks>
-		///    This property is implemented using the nested Matroska 
+		///    This property is implemented using the nested Matroska
 		///    SimpleTag "SORT_WITH" inside the "TITLE" SimpleTag.
 		/// </remarks>
 		public override string TitleSort {
@@ -552,16 +552,16 @@ namespace TagLib.Matroska
 		}
 
 		/// <summary>
-		///    Gets and sets a short description, one-liner. 
+		///    Gets and sets a short description, one-liner.
 		///    It represents the tagline of the Video/music.
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the subtitle
-		///    the media represented by the current instance 
+		///    the media represented by the current instance
 		///    or an empty array if no value is present.
 		/// </value>
 		/// <remarks>
-		///    This property is implemented using the Matroska 
+		///    This property is implemented using the Matroska
 		///    SimpleTag "SUBTITLE".
 		/// </remarks>
 		public override string Subtitle {
@@ -572,18 +572,18 @@ namespace TagLib.Matroska
 		/// <summary>
 		///    Gets and sets a short description of the media.
 		///    For a music, this could be the comment that the artist
-		///    made of its artwork. For a video, this should be a 
+		///    made of its artwork. For a video, this should be a
 		///    short summary of the story/plot, but a spoiler. This
 		///    should give the impression of what to expect in the
 		///    media.
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the subtitle
-		///    the media represented by the current instance 
+		///    the media represented by the current instance
 		///    or an empty array if no value is present.
 		/// </value>
 		/// <remarks>
-		///    This property is implemented using the Matroska 
+		///    This property is implemented using the Matroska
 		///    SimpleTag "SUMMARY" (note that this is not the
 		///    "DESCRIPTION" tag).
 		/// </remarks>
@@ -619,10 +619,10 @@ namespace TagLib.Matroska
 		///    A <see cref="T:string[]" /> containing the sort names for
 		///    the performers or artists who performed in the media
 		///    described by the current instance, or an empty array if
-		///    no value is present. 
+		///    no value is present.
 		/// </value>
 		/// <remarks>
-		///    This property is implemented using the nested Matroska 
+		///    This property is implemented using the nested Matroska
 		///    SimpleTag "SORT_WITH" inside the "ACTOR" or "PERFORMER" SimpleTag.
 		/// </remarks>
 		public override string[] PerformersSort {
@@ -641,11 +641,11 @@ namespace TagLib.Matroska
 		///    A <see cref="T:string[]" /> containing the roles for
 		///    the performers or artists who performed in the media
 		///    described by the current instance, or an empty array if
-		///    no value is present. 
+		///    no value is present.
 		/// </value>
 		/// <remarks>
-		///    This property is implemented using the nested Matroska 
-		///    SimpleTag "CHARACTER" or "INSTRUMENTS" inside the 
+		///    This property is implemented using the nested Matroska
+		///    SimpleTag "CHARACTER" or "INSTRUMENTS" inside the
 		///    "ACTOR" or "PERFORMER" SimpleTag.
 		/// </remarks>
 		public override string[] PerformersRole {
@@ -693,7 +693,7 @@ namespace TagLib.Matroska
 		///    no value is present.
 		/// </value>
 		/// <remarks>
-		///    This property is implemented using the nested Matroska 
+		///    This property is implemented using the nested Matroska
 		///    SimpleTag "SORT_WITH" inside the "ARTIST" SimpleTag.
 		/// </remarks>
 
@@ -727,12 +727,12 @@ namespace TagLib.Matroska
 
 
 		/// <summary>
-		///    Gets and sets the sort names for the composers of the 
+		///    Gets and sets the sort names for the composers of the
 		///    media represented by the current instance.
 		/// </summary>
 		/// <value>
 		///    A <see cref="T:string[]" /> containing the sort names
-		///    for the composers of the media represented by the 
+		///    for the composers of the media represented by the
 		///    current instance or an empty array if no value is present.
 		/// </value>
 		/// <remarks>
@@ -746,7 +746,7 @@ namespace TagLib.Matroska
 		///    For example, "McCartney, Paul".</para>
 		/// </remarks>
 		/// <remarks>
-		///    This property is implemented using the nested Matroska 
+		///    This property is implemented using the nested Matroska
 		///    SimpleTag "SORT_WITH" inside the "COMPOSER" SimpleTag.
 		/// </remarks>
 		public override string[] ComposersSort {
@@ -783,12 +783,12 @@ namespace TagLib.Matroska
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the sort name of 
+		///    A <see cref="string" /> containing the sort name of
 		///    the Album Title of the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
 		/// <remarks>
-		///    This property is implemented using the nested Matroska 
+		///    This property is implemented using the nested Matroska
 		///    SimpleTag "SORT_WITH" inside the "TITLE" SimpleTag.
 		/// </remarks>
 		public override string AlbumSort {
@@ -876,8 +876,8 @@ namespace TagLib.Matroska
 				uint ret = 0;
 
 				// Parse Date to retrieve year
-				// Expected format: YYYY-MM-DD HH:MM:SS.MSS 
-				//   with: YYYY = Year, -MM = Month, -DD = Days, 
+				// Expected format: YYYY-MM-DD HH:MM:SS.MSS
+				//   with: YYYY = Year, -MM = Month, -DD = Days,
 				//         HH = Hours, :MM = Minutes, :SS = Seconds, :MSS = Milliseconds
 				if (val != null) {
 					int off = val.IndexOf ('-');
@@ -1064,8 +1064,8 @@ namespace TagLib.Matroska
 		///    Gets and sets the date at which the tag has been written.
 		/// </summary>
 		/// <value>
-		///    A nullable <see cref="DateTime" /> object containing the 
-		///    date at which the tag has been written, or <see 
+		///    A nullable <see cref="DateTime" /> object containing the
+		///    date at which the tag has been written, or <see
 		///    langword="null" /> if no value present.
 		/// </value>
 		/// <remarks>
@@ -1095,7 +1095,7 @@ namespace TagLib.Matroska
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicBrainz 
+		///    A <see cref="string" /> containing the MusicBrainz
 		///    ArtistID for the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -1109,7 +1109,7 @@ namespace TagLib.Matroska
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicBrainz 
+		///    A <see cref="string" /> containing the MusicBrainz
 		///    ReleaseGroupID for the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -1123,7 +1123,7 @@ namespace TagLib.Matroska
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicBrainz 
+		///    A <see cref="string" /> containing the MusicBrainz
 		///    ReleaseID for the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -1137,7 +1137,7 @@ namespace TagLib.Matroska
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicBrainz 
+		///    A <see cref="string" /> containing the MusicBrainz
 		///    ReleaseArtistID for the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -1151,7 +1151,7 @@ namespace TagLib.Matroska
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicBrainz 
+		///    A <see cref="string" /> containing the MusicBrainz
 		///    TrackID for the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -1165,7 +1165,7 @@ namespace TagLib.Matroska
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicBrainz 
+		///    A <see cref="string" /> containing the MusicBrainz
 		///    DiscID for the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -1179,7 +1179,7 @@ namespace TagLib.Matroska
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicIPPUID 
+		///    A <see cref="string" /> containing the MusicIPPUID
 		///    for the media described by the current instance or
 		///    null if no value is present.
 		/// </value>
@@ -1193,9 +1193,9 @@ namespace TagLib.Matroska
 		//    the media described by the current instance.
 		// </summary>
 		// <value>
-		//    A <see cref="string" /> containing the AmazonID 
+		//    A <see cref="string" /> containing the AmazonID
 		//    for the media described by the current instance or
-		//    null if no value is present.  
+		//    null if no value is present.
 		// </value>
 		// <remarks>
 		//    A definition on where to store the ASIN for
@@ -1211,7 +1211,7 @@ namespace TagLib.Matroska
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicBrainz 
+		///    A <see cref="string" /> containing the MusicBrainz
 		///    ReleaseStatus for the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -1225,7 +1225,7 @@ namespace TagLib.Matroska
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicBrainz 
+		///    A <see cref="string" /> containing the MusicBrainz
 		///    ReleaseType for the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -1239,7 +1239,7 @@ namespace TagLib.Matroska
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicBrainz 
+		///    A <see cref="string" /> containing the MusicBrainz
 		///    ReleaseCountry for the media described by the current
 		///    instance or null if no value is present.
 		/// </value>

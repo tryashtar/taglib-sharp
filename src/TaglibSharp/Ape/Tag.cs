@@ -10,7 +10,7 @@
 //
 // Copyright (C) 2005-2007 Brian Nickel
 // Copyright (C) 2004 Allan Sandfeld Jensen (Original Implementation)
-// 
+//
 // This library is free software; you can redistribute it and/or modify
 // it  under the terms of the GNU Lesser General Public License version
 // 2.1 as published by the Free Software Foundation.
@@ -785,7 +785,7 @@ namespace TagLib.Ape
 		///    Gets the tag types contained in the current instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="TagTypes.Ape" />.
+		///    Always <see cref="TagLib.TagTypes.Ape" />.
 		/// </value>
 		public override TagTypes TagTypes {
 			get { return TagTypes.Ape; }
@@ -815,7 +815,7 @@ namespace TagLib.Ape
 		/// <value>
 		///    A <see cref="string" /> containing the sort names for
 		///    the Title of the media described by the current instance,
-		///    or null if no value is present. 
+		///    or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "TitleSort" item.
@@ -827,20 +827,20 @@ namespace TagLib.Ape
 
 
 		/// <summary>
-		///    Gets and sets a short description, one-liner. 
+		///    Gets and sets a short description, one-liner.
 		///    It represents the tagline of the Video/music.
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the subtitle
-		///    the media represented by the current instance 
+		///    the media represented by the current instance
 		///    or an empty array if no value is present.
 		/// </value>
 		/// <remarks>
-		///    <para>This field gives a nice/short precision to 
+		///    <para>This field gives a nice/short precision to
 		///    the title, which is typically below the title on the
 		///    front cover of a media.
-		///    For example, for "Back to the future", this would be 
-		///    "It's About Time". 
+		///    For example, for "Back to the future", this would be
+		///    "It's About Time".
 		///    </para>
 		/// </remarks>
 		/// <remarks>
@@ -854,20 +854,20 @@ namespace TagLib.Ape
 		/// <summary>
 		///    Gets and sets a short description of the media.
 		///    For a music, this could be the comment that the artist
-		///    made of its artwork. For a video, this should be a 
+		///    made of its artwork. For a video, this should be a
 		///    short summary of the story/plot, but a spoiler. This
 		///    should give the impression of what to expect in the
 		///    media.
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the subtitle
-		///    the media represented by the current instance 
+		///    the media represented by the current instance
 		///    or an empty array if no value is present.
 		/// </value>
 		/// <remarks>
 		///    <para>This is especially relevant for a movie.
 		///    For example, for "Back to the Future 2", this could be
-		///    "After visiting 2015, Marty McFly must repeat his visit 
+		///    "After visiting 2015, Marty McFly must repeat his visit
 		///    to 1955 to prevent disastrous changes to 1985...without
 		///    interfering with his first trip".
 		///    </para>
@@ -906,7 +906,7 @@ namespace TagLib.Ape
 		///    A <see cref="string" /> array containing the sort names for
 		///    the performers or artists who performed in the media
 		///    described by the current instance, or an empty array if
-		///    no value is present. 
+		///    no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "ArtistSort" field.
@@ -920,10 +920,10 @@ namespace TagLib.Ape
 
 		/// <summary>
 		///    Gets and sets the Charaters for a video media, or
-		///    instruments played for music media. 
+		///    instruments played for music media.
 		///    This should match the <see cref="Performers"/> array (for
 		///    each person correspond one/more role). Several roles for
-		///    the same artist/actor can be made up with semicolons. 
+		///    the same artist/actor can be made up with semicolons.
 		///    For example, "Marty McFly; Marty McFly Jr.; Marlene McFly".
 		/// </summary>
 		/// <remarks>
@@ -931,18 +931,18 @@ namespace TagLib.Ape
 		///    instrument played by each artist in a music may be of
 		///    relevance.
 		///    </para>
-		///    <para>It is highly important to match each role to the 
-		///    performers. This means that a role may be <see 
+		///    <para>It is highly important to match each role to the
+		///    performers. This means that a role may be <see
 		///    langword="null"/> to keep the match between a
 		///    Performers[i] and PerformersRole[i].
 		///    </para>
 		/// </remarks>
 		/// <remarks>
 		///    This property is implemented using the "TMCL" Text
-		///    Information Frame: The 'Musician credits list' is 
-		///    intended as a mapping between instruments and the 
-		///    musician that played it.Every odd field is an 
-		///    instrument and every even is an artist or a comma 
+		///    Information Frame: The 'Musician credits list' is
+		///    intended as a mapping between instruments and the
+		///    musician that played it.Every odd field is an
+		///    instrument and every even is an artist or a comma
 		///    delimited list of artists.
 		/// </remarks>
 		/// <remarks>
@@ -1065,7 +1065,7 @@ namespace TagLib.Ape
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the sort name of 
+		///    A <see cref="string" /> containing the sort name of
 		///    the Album Title of the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -1311,8 +1311,8 @@ namespace TagLib.Ape
 		///    Gets and sets the date at which the tag has been written.
 		/// </summary>
 		/// <value>
-		///    A nullable <see cref="DateTime" /> object containing the 
-		///    date at which the tag has been written, or <see 
+		///    A nullable <see cref="DateTime" /> object containing the
+		///    date at which the tag has been written, or <see
 		///    langword="null" /> if no value present.
 		/// </value>
 		/// <remarks>
@@ -1544,7 +1544,7 @@ namespace TagLib.Ape
 		///    per the ReplayGain specification.
 		/// </value>
 		/// <remarks>
-		///    This property is implemented using the 
+		///    This property is implemented using the
 		///    "REPLAYGAIN_TRACK_GAIN" field. Set the value to double.NaN
 		///    to clear the field.
 		/// </remarks>
@@ -1583,7 +1583,7 @@ namespace TagLib.Ape
 		///    ReplayGain specification.
 		/// </value>
 		/// <remarks>
-		///    This property is implemented using the 
+		///    This property is implemented using the
 		///    "REPLAYGAIN_TRACK_PEAK" field. Set the value to double.NaN
 		///    to clear the field.
 		/// </remarks>
@@ -1616,7 +1616,7 @@ namespace TagLib.Ape
 		///    per the ReplayGain specification.
 		/// </value>
 		/// <remarks>
-		///    This property is implemented using the 
+		///    This property is implemented using the
 		///    "REPLAYGAIN_ALBUM_GAIN" field. Set the value to double.NaN
 		///    to clear the field.
 		/// </remarks>
@@ -1654,7 +1654,7 @@ namespace TagLib.Ape
 		///    ReplayGain specification.
 		/// </value>
 		/// <remarks>
-		///    This property is implemented using the 
+		///    This property is implemented using the
 		///    "REPLAYGAIN_ALBUM_PEAK" field. Set the value to double.NaN
 		///    to clear the field.
 		/// </remarks>

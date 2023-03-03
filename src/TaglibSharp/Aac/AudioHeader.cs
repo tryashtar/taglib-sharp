@@ -2,7 +2,7 @@
 // AudioHeader.cs: Provides information about an ADTS AAC audio stream.
 //
 // Copyright (C) 2009 Patrick Dehne
-// 
+//
 // This library is free software; you can redistribute it and/or modify
 // it  under the terms of the GNU Lesser General Public License version
 // 2.1 as published by the Free Software Foundation.
@@ -96,7 +96,7 @@ namespace TagLib.Aac
 		/// <summary>
 		///    Constructs and initializes a new empty instance of <see
 		///    cref="AudioHeader" />
-		/// </summary>       
+		/// </summary>
 		AudioHeader ()
 		{
 			stream_length = 0;
@@ -165,7 +165,7 @@ namespace TagLib.Aac
 		///    instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="MediaTypes.Audio" />.
+		///    Always <see cref="TagLib.MediaTypes.Audio" />.
 		/// </value>
 		public MediaTypes MediaTypes {
 			get { return MediaTypes.Audio; }
@@ -180,7 +180,7 @@ namespace TagLib.Aac
 		///    media represented by the current instance.
 		/// </value>
 		/// <remarks>
-		///    If <see cref="SetStreamLength" /> has not been called, this 
+		///    If <see cref="SetStreamLength" /> has not been called, this
 		///    value will not be correct.
 		/// </remarks>
 		public TimeSpan Duration {
@@ -316,7 +316,7 @@ namespace TagLib.Aac
 						try {
 							BitStream bits = new BitStream (buffer.Mid (i, 7).Data);
 
-							// 12 bits sync header 
+							// 12 bits sync header
 							bits.ReadInt32 (12);
 
 							// 1 bit mpeg 2/4
@@ -325,13 +325,13 @@ namespace TagLib.Aac
 							// 2 bits layer
 							bits.ReadInt32 (2);
 
-							// 1 bit protection absent  
+							// 1 bit protection absent
 							bits.ReadInt32 (1);
 
 							// 2 bits profile object type
 							bits.ReadInt32 (2);
 
-							// 4 bits sampling frequency index                            
+							// 4 bits sampling frequency index
 							int samplerateindex = bits.ReadInt32 (4);
 							if (samplerateindex >= sample_rates.Length)
 								return false;

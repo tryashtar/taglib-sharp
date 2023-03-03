@@ -10,7 +10,7 @@
 //
 // Copyright (C) 2005-2007 Brian Nickel
 // Copyright (C) 2003 Scott Wheeler
-// 
+//
 // This library is free software; you can redistribute it and/or modify
 // it  under the terms of the GNU Lesser General Public License version
 // 2.1 as published by the Free Software Foundation.
@@ -187,7 +187,7 @@ namespace TagLib
 		}
 
 		/// <summary>
-		///    Gets and sets the sort name for the title of the media 
+		///    Gets and sets the sort name for the title of the media
 		///    described by the current instance.
 		/// </summary>
 		/// <value>
@@ -205,20 +205,20 @@ namespace TagLib
 
 
 		/// <summary>
-		///    Gets and sets a short description, one-liner. 
+		///    Gets and sets a short description, one-liner.
 		///    It represents the tagline of the Video/music.
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the subtitle
-		///    the media represented by the current instance 
+		///    the media represented by the current instance
 		///    or an empty array if no value is present.
 		/// </value>
 		/// <remarks>
-		///    <para>This field gives a nice/short precision to 
+		///    <para>This field gives a nice/short precision to
 		///    the title, which is typically below the title on the
 		///    front cover of a media.
-		///    For example, for "Back to the future", this would be 
-		///    "It's About Time". 
+		///    For example, for "Back to the future", this would be
+		///    "It's About Time".
 		///    </para>
 		/// </remarks>
 		public virtual string Subtitle {
@@ -229,20 +229,20 @@ namespace TagLib
 		/// <summary>
 		///    Gets and sets a short description of the media.
 		///    For a music, this could be the comment that the artist
-		///    made of its artwork. For a video, this should be a 
+		///    made of its artwork. For a video, this should be a
 		///    short summary of the story/plot, but a spoiler. This
 		///    should give the impression of what to expect in the
 		///    media.
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the subtitle
-		///    the media represented by the current instance 
+		///    the media represented by the current instance
 		///    or an empty array if no value is present.
 		/// </value>
 		/// <remarks>
 		///    <para>This is especially relevant for a movie.
 		///    For example, for "Back to the Future 2", this could be
-		///    "After visiting 2015, Marty McFly must repeat his visit 
+		///    "After visiting 2015, Marty McFly must repeat his visit
 		///    to 1955 to prevent disastrous changes to 1985...without
 		///    interfering with his first trip".
 		///    </para>
@@ -264,8 +264,8 @@ namespace TagLib
 		/// </value>
 		/// <remarks>
 		///    <para>This field is most commonly called "Artists" in
-		///    Audio media, or "Actor" in Video media, and should be 
-		///    used to represent each artist/actor appearing in the 
+		///    Audio media, or "Actor" in Video media, and should be
+		///    used to represent each artist/actor appearing in the
 		///    media. It can be simple in the form of "The Beatles"
 		///    or more complicated in the form of "John Lennon,
 		///    Paul McCartney, George Harrison, Pete Best", depending
@@ -289,7 +289,7 @@ namespace TagLib
 		///    A <see cref="T:string[]" /> containing the sort names for
 		///    the performers or artists who performed in the media
 		///    described by the current instance, or an empty array if
-		///    no value is present. 
+		///    no value is present.
 		/// </value>
 		/// <remarks>
 		///    <para>This is used to provide more control over how tracks
@@ -306,10 +306,10 @@ namespace TagLib
 
 		/// <summary>
 		///    Gets and sets the Charaters for a video media, or
-		///    instruments played for music media. 
+		///    instruments played for music media.
 		///    This should match the <see cref="Performers"/> array (for
 		///    each person correspond one/more role). Several roles for
-		///    the same artist/actor can be made up with semicolons. 
+		///    the same artist/actor can be made up with semicolons.
 		///    For example, "Marty McFly; Marty McFly Jr.; Marlene McFly".
 		/// </summary>
 		/// <remarks>
@@ -317,8 +317,8 @@ namespace TagLib
 		///    instrument played by each artist in a music may be of
 		///    relevance.
 		///    </para>
-		///    <para>It is highly important to match each role to the 
-		///    performers. This means that a role may be <see 
+		///    <para>It is highly important to match each role to the
+		///    performers. This means that a role may be <see
 		///    langword="null"/> to keep the match between a
 		///    Performers[i] and PerformersRole[i].
 		///    </para>
@@ -411,12 +411,12 @@ namespace TagLib
 		}
 
 		/// <summary>
-		///    Gets and sets the sort names for the composers of the 
+		///    Gets and sets the sort names for the composers of the
 		///    media represented by the current instance.
 		/// </summary>
 		/// <value>
 		///    A <see cref="T:string[]" /> containing the sort names
-		///    for the composers of the media represented by the 
+		///    for the composers of the media represented by the
 		///    current instance or an empty array if no value is present.
 		/// </value>
 		/// <remarks>
@@ -437,7 +437,7 @@ namespace TagLib
 		/// <summary>
 		///    Gets and sets the album of the media represented by the
 		///    current instance. For a video media, this represent the
-		///    collection the video belongs to. 
+		///    collection the video belongs to.
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> object containing the album of
@@ -452,7 +452,7 @@ namespace TagLib
 		///    rather than the season of a serie.</para>
 		///    <para>For example, "Rubber Soul" (an album by the
 		///    Beatles), "The Sopranos: Complete First Season" (a boxed
-		///    set of TV episodes), "Back To The Future" (a 
+		///    set of TV episodes), "Back To The Future" (a
 		///    serie of movies/sequels), or "Game of Thrones" (a serie
 		///    with several seasons).</para>
 		/// </remarks>
@@ -462,12 +462,12 @@ namespace TagLib
 		}
 
 		/// <summary>
-		///    Gets and sets the sort names for the Album Title of the 
+		///    Gets and sets the sort names for the Album Title of the
 		///    media represented by the current instance.
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the sort names
-		///    for the Album Title of the media represented by the 
+		///    for the Album Title of the media represented by the
 		///    current instance or an empty array if no value is present.
 		/// </value>
 		/// <remarks>
@@ -519,8 +519,8 @@ namespace TagLib
 		///    album or video. This is often used for filtering media.
 		///    </para>
 		///    <para>A list of common audio genres as popularized by
-		///    ID3v1, are stored in <see cref="Genres.Audio" />.
-		///    Additionally, <see cref="Genres.Video" /> contains video
+		///    ID3v1, are stored in <see cref="TagLib.Genres.Audio" />.
+		///    Additionally, <see cref="TagLib.Genres.Video" /> contains video
 		///    genres as used by DivX.</para>
 		/// </remarks>
 		public virtual string[] Genres {
@@ -566,7 +566,7 @@ namespace TagLib
 		///    album cover and no more than <see cref="TrackCount"
 		///    /> if <see cref="TrackCount" /> is non-zero.</para>
 		///    <para>Most tagging formats store this as a string. To
-		///    help sorting, a two-digit zero-filled value is used 
+		///    help sorting, a two-digit zero-filled value is used
 		///    in the resulting tag.</para>
 		///    <para>For a serie, this property represents the episode
 		///    in a season of the serie.
@@ -579,12 +579,12 @@ namespace TagLib
 
 		/// <summary>
 		///    Gets and sets the number of tracks in the album, or the
-		///    number of episodes in a serie, of the media represented 
+		///    number of episodes in a serie, of the media represented
 		///    by the current instance.
 		/// </summary>
 		/// <value>
 		///    A <see cref="uint" /> containing the number of tracks in
-		///    the album, or the number of episodes in a serie, of the 
+		///    the album, or the number of episodes in a serie, of the
 		///    media represented by the current instance or zero if not
 		///    specified.
 		/// </value>
@@ -621,14 +621,14 @@ namespace TagLib
 		}
 
 		/// <summary>
-		///    Gets and sets the number of discs or seasons in the 
-		///    boxed set containing the media represented by the 
+		///    Gets and sets the number of discs or seasons in the
+		///    boxed set containing the media represented by the
 		///    current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="uint" /> containing the number of discs 
-		///    or seasons in the boxed set containing the media 
-		///    represented by the current instance or zero if not 
+		///    A <see cref="uint" /> containing the number of discs
+		///    or seasons in the boxed set containing the media
+		///    represented by the current instance or zero if not
 		///    specified.
 		/// </value>
 		/// <remarks>
@@ -748,8 +748,8 @@ namespace TagLib
 		///    Gets and sets the date at which the tag has been written.
 		/// </summary>
 		/// <value>
-		///    A nullable <see cref="DateTime" /> object containing the 
-		///    date at which the tag has been written, or <see 
+		///    A nullable <see cref="DateTime" /> object containing the
+		///    date at which the tag has been written, or <see
 		///    langword="null" /> if no value present.
 		/// </value>
 		public virtual DateTime? DateTagged {
@@ -954,9 +954,9 @@ namespace TagLib
 		/// </value>
 		/// <remarks>
 		///    <para>This field represents the MusicBrainz ReleaseCountry, that describes
-		///    the country in which an album was released.  Note that the ReleaseCountry 
-		///    of an album is not necessarily the country in which it was produced. The 
-		///    label itself will typically be more relevant. eg, a release on "Foo Records UK" 
+		///    the country in which an album was released.  Note that the ReleaseCountry
+		///    of an album is not necessarily the country in which it was produced. The
+		///    label itself will typically be more relevant. eg, a release on "Foo Records UK"
 		///    that has "Made in Austria" printed on it, will likely be a UK release.</para>
 		/// </remarks>
 		public virtual string MusicBrainzReleaseCountry {
@@ -1408,11 +1408,11 @@ namespace TagLib
 
 
 		/// <summary>
-		///    Set the Tags that represent the Tagger software 
+		///    Set the Tags that represent the Tagger software
 		///    (TagLib#) itself.
 		/// </summary>
 		/// <remarks>
-		///    This is typically a method to call just before 
+		///    This is typically a method to call just before
 		///    saving a tag.
 		/// </remarks>
 		public void SetInfoTag ()

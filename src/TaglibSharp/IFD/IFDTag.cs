@@ -116,7 +116,7 @@ namespace TagLib.IFD
 		///    Gets the tag types contained in the current instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="TagTypes.TiffIFD" />.
+		///    Always <see cref="TagLib.TagTypes.TiffIFD" />.
 		/// </value>
 		public override TagTypes TagTypes {
 			get { return TagTypes.TiffIFD; }

@@ -1,5 +1,5 @@
 //
-// File.cs: Provides tagging and properties support for the DSD (Direct Stream Digital) DSF  
+// File.cs: Provides tagging and properties support for the DSD (Direct Stream Digital) DSF
 // file Format.
 //
 // Author:
@@ -280,7 +280,7 @@ namespace TagLib.Dsf
 		/// </param>
 		/// <remarks>
 		///    In order to remove all tags from a file, pass <see
-		///    cref="TagTypes.AllTags" /> as <paramref name="types" />.
+		///    cref="TagLib.TagTypes.AllTags" /> as <paramref name="types" />.
 		/// </remarks>
 		public override void RemoveTags (TagTypes types)
 		{

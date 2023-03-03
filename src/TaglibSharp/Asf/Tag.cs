@@ -6,7 +6,7 @@
 //   Brian Nickel (brian.nickel@gmail.com)
 //
 // Copyright (C) 2005-2007 Brian Nickel
-// 
+//
 // This library is free software; you can redistribute it and/or modify
 // it  under the terms of the GNU Lesser General Public License version
 // 2.1 as published by the Free Software Foundation.
@@ -474,7 +474,7 @@ namespace TagLib.Asf
 		///    Gets the tag types contained in the current instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="TagTypes.Asf" />.
+		///    Always <see cref="TagLib.TagTypes.Asf" />.
 		/// </value>
 		public override TagTypes TagTypes {
 			get { return TagTypes.Asf; }
@@ -500,20 +500,20 @@ namespace TagLib.Asf
 
 
 		/// <summary>
-		///    Gets and sets a short description, one-liner. 
+		///    Gets and sets a short description, one-liner.
 		///    It represents the tagline of the Video/music.
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the subtitle
-		///    the media represented by the current instance 
+		///    the media represented by the current instance
 		///    or an empty array if no value is present.
 		/// </value>
 		/// <remarks>
-		///    <para>This field gives a nice/short precision to 
+		///    <para>This field gives a nice/short precision to
 		///    the title, which is typically below the title on the
 		///    front cover of a media.
-		///    For example, for "Back to the future", this would be 
-		///    "It's About Time". 
+		///    For example, for "Back to the future", this would be
+		///    "It's About Time".
 		///    </para>
 		/// </remarks>
 		/// <remarks>
@@ -537,7 +537,7 @@ namespace TagLib.Asf
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the sort name of 
+		///    A <see cref="string" /> containing the sort name of
 		///    the Track Title of the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -558,14 +558,14 @@ namespace TagLib.Asf
 		/// <summary>
 		///    Gets and sets a short description of the media.
 		///    For a music, this could be the comment that the artist
-		///    made of its artwork. For a video, this should be a 
+		///    made of its artwork. For a video, this should be a
 		///    short summary of the story/plot, but a spoiler. This
 		///    should give the impression of what to expect in the
 		///    media.
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the subtitle
-		///    the media represented by the current instance 
+		///    the media represented by the current instance
 		///    or an empty array if no value is present.
 		/// </value>
 		/// <remarks>
@@ -605,7 +605,7 @@ namespace TagLib.Asf
 		///    A <see cref="T:string[]" /> containing the sort names for
 		///    the performers or artists who performed in the media
 		///    described by the current instance, or an empty array if
-		///    no value is present. 
+		///    no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "WM/ArtistSortOrder" field.
@@ -720,7 +720,7 @@ namespace TagLib.Asf
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the sort name of 
+		///    A <see cref="string" /> containing the sort name of
 		///    the Album Title of the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -1095,7 +1095,7 @@ namespace TagLib.Asf
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicBrainz 
+		///    A <see cref="string" /> containing the MusicBrainz
 		///    ArtistID for the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -1114,7 +1114,7 @@ namespace TagLib.Asf
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicBrainz 
+		///    A <see cref="string" /> containing the MusicBrainz
 		///    ReleaseGroupID for the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -1133,7 +1133,7 @@ namespace TagLib.Asf
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicBrainz 
+		///    A <see cref="string" /> containing the MusicBrainz
 		///    ReleaseID for the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -1152,7 +1152,7 @@ namespace TagLib.Asf
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicBrainz 
+		///    A <see cref="string" /> containing the MusicBrainz
 		///    ReleaseArtistID for the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -1171,7 +1171,7 @@ namespace TagLib.Asf
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicBrainz 
+		///    A <see cref="string" /> containing the MusicBrainz
 		///    TrackID for the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -1190,7 +1190,7 @@ namespace TagLib.Asf
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicBrainz 
+		///    A <see cref="string" /> containing the MusicBrainz
 		///    DiscID for the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -1209,7 +1209,7 @@ namespace TagLib.Asf
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicIPPUID 
+		///    A <see cref="string" /> containing the MusicIPPUID
 		///    for the media described by the current instance or
 		///    null if no value is present.
 		/// </value>
@@ -1228,9 +1228,9 @@ namespace TagLib.Asf
 		//    the media described by the current instance.
 		// </summary>
 		// <value>
-		//    A <see cref="string" /> containing the AmazonID 
+		//    A <see cref="string" /> containing the AmazonID
 		//    for the media described by the current instance or
-		//    null if no value is present.  
+		//    null if no value is present.
 		// </value>
 		// <remarks>
 		//    A definition on where to store the ASIN for
@@ -1246,7 +1246,7 @@ namespace TagLib.Asf
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicBrainz 
+		///    A <see cref="string" /> containing the MusicBrainz
 		///    ReleaseStatus for the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -1265,7 +1265,7 @@ namespace TagLib.Asf
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicBrainz 
+		///    A <see cref="string" /> containing the MusicBrainz
 		///    ReleaseType for the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -1284,7 +1284,7 @@ namespace TagLib.Asf
 		///    the media described by the current instance.
 		/// </summary>
 		/// <value>
-		///    A <see cref="string" /> containing the MusicBrainz 
+		///    A <see cref="string" /> containing the MusicBrainz
 		///    ReleaseCountry for the media described by the current
 		///    instance or null if no value is present.
 		/// </value>
@@ -1306,7 +1306,7 @@ namespace TagLib.Asf
 		///    per the ReplayGain specification.
 		/// </value>
 		/// <remarks>
-		///    This property is implemented using the 
+		///    This property is implemented using the
 		///    "REPLAYGAIN_TRACK_GAIN" field. Set the value to double.NaN
 		///    to clear the field.
 		/// </remarks>
@@ -1346,7 +1346,7 @@ namespace TagLib.Asf
 		///    ReplayGain specification.
 		/// </value>
 		/// <remarks>
-		///    This property is implemented using the 
+		///    This property is implemented using the
 		///    "REPLAYGAIN_TRACK_PEAK" field. Set the value to double.NaN
 		///    to clear the field.
 		/// </remarks>
@@ -1379,7 +1379,7 @@ namespace TagLib.Asf
 		///    per the ReplayGain specification.
 		/// </value>
 		/// <remarks>
-		///    This property is implemented using the 
+		///    This property is implemented using the
 		///    "REPLAYGAIN_ALBUM_GAIN" field. Set the value to double.NaN
 		///    to clear the field.
 		/// </remarks>
@@ -1417,7 +1417,7 @@ namespace TagLib.Asf
 		///    ReplayGain specification.
 		/// </value>
 		/// <remarks>
-		///    This property is implemented using the 
+		///    This property is implemented using the
 		///    "REPLAYGAIN_ALBUM_PEAK" field. Set the value to double.NaN
 		///    to clear the field.
 		/// </remarks>

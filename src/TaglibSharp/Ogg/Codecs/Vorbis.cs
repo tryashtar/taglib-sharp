@@ -233,7 +233,7 @@ namespace TagLib.Ogg.Codecs
 		///    instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="MediaTypes.Audio" />.
+		///    Always <see cref="TagLib.MediaTypes.Audio" />.
 		/// </value>
 		public override MediaTypes MediaTypes {
 			get { return MediaTypes.Audio; }

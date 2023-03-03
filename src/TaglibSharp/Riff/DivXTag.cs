@@ -241,7 +241,7 @@ namespace TagLib.Riff
 		///    Gets the tag types contained in the current instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="TagTypes.Id3v1" />.
+		///    Always <see cref="TagLib.TagTypes.Id3v1" />.
 		/// </value>
 		public override TagTypes TagTypes {
 			get { return TagTypes.DivX; }

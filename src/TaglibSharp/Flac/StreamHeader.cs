@@ -9,7 +9,7 @@
 //
 // Copyright (C) 2006-2007 Brian Nickel
 // Copyright (C) 2003 Allan Sandfeld Jensen (Original Implementation)
-// 
+//
 // This library is free software; you can redistribute it and/or modify
 // it  under the terms of the GNU Lesser General Public License version
 // 2.1 as published by the Free Software Foundation.
@@ -160,7 +160,7 @@ namespace TagLib.Flac
 		///    instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="MediaTypes.Audio" />.
+		///    Always <see cref="TagLib.MediaTypes.Audio" />.
 		/// </value>
 		public MediaTypes MediaTypes {
 			get { return MediaTypes.Audio; }

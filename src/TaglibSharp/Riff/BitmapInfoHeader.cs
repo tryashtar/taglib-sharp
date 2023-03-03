@@ -243,7 +243,7 @@ namespace TagLib.Riff
 		///    instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="MediaTypes.Video" />.
+		///    Always <see cref="TagLib.MediaTypes.Video" />.
 		/// </value>
 		public MediaTypes MediaTypes {
 			get { return MediaTypes.Video; }

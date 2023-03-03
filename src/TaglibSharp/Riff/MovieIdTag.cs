@@ -113,7 +113,7 @@ namespace TagLib.Riff
 		///    Gets the tag types contained in the current instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="TagTypes.MovieId" />.
+		///    Always <see cref="TagLib.TagTypes.MovieId" />.
 		/// </value>
 		public override TagTypes TagTypes {
 			get { return TagTypes.MovieId; }

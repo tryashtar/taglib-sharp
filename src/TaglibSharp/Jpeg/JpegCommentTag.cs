@@ -81,7 +81,7 @@ namespace TagLib.Jpeg
 		///    Gets the tag types contained in the current instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="TagTypes.JpegComment" />.
+		///    Always <see cref="TagLib.TagTypes.JpegComment" />.
 		/// </value>
 		public override TagTypes TagTypes {
 			get { return TagTypes.JpegComment; }

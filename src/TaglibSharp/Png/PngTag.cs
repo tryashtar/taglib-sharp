@@ -269,7 +269,7 @@ namespace TagLib.Png
 		///    Gets the tag types contained in the current instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="TagTypes.Png" />.
+		///    Always <see cref="TagLib.TagTypes.Png" />.
 		/// </value>
 		public override TagTypes TagTypes {
 			get { return TagTypes.Png; }

@@ -197,7 +197,7 @@ namespace TagLib.Audible
 				album = strValue;
 				break;
 			}
-			
+
 		}
 		*/
 
@@ -209,7 +209,7 @@ namespace TagLib.Audible
 		///    Gets the tag types contained in the current instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="TagTypes.AudibleMetadata" />.
+		///    Always <see cref="TagLib.TagTypes.AudibleMetadata" />.
 		/// </value>
 		public override TagTypes TagTypes {
 			get { return TagTypes.AudibleMetadata; }
@@ -292,7 +292,7 @@ namespace TagLib.Audible
 		///    current instance.
 		/// </summary>
 		/// <value>
-		///    	A <see cref="T:string[]" /> object containing a single 
+		///    	A <see cref="T:string[]" /> object containing a single
 		/// 	artist described by the current instance or <see
 		///    langword="null" /> if no value is present.
 		/// </value>

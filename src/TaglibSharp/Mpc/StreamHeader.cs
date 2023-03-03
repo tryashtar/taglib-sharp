@@ -78,7 +78,7 @@ namespace TagLib.MusePack
 		int channels;
 
 		/// <summary>
-		///    Contains the count of frames in the stream. 
+		///    Contains the count of frames in the stream.
 		/// </summary>
 		ulong framecount;
 
@@ -133,8 +133,8 @@ namespace TagLib.MusePack
 		/// </exception>
 		/// <exception cref="CorruptFileException">
 		///    <paramref name="file" /> does not begin with <see
-		///    cref="FileIdentifierSv7" />  or with <see 
-		///    cref="FileIdentifierSv8" /> or is less than 
+		///    cref="FileIdentifierSv7" />  or with <see
+		///    cref="FileIdentifierSv8" /> or is less than
 		///    <see cref="P:File.Size" /> bytes long.
 		/// </exception>
 		public StreamHeader (File file, long streamLength)
@@ -159,7 +159,7 @@ namespace TagLib.MusePack
 				ReadSv7Properties (magic + file.ReadBlock ((int)SizeSV7 - 4));
 			else if (magic.StartsWith (FileIdentifierSv8))
 				// for SV8 the properties need to be read from
-				// packet information inside the file 
+				// packet information inside the file
 				ReadSv8Properties (file);
 			else
 				throw new CorruptFileException ("Data does not begin with identifier.");
@@ -317,7 +317,7 @@ namespace TagLib.MusePack
 		///    instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="MediaTypes.Audio" />.
+		///    Always <see cref="TagLib.MediaTypes.Audio" />.
 		/// </value>
 		public MediaTypes MediaTypes {
 			get { return MediaTypes.Audio; }

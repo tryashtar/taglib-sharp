@@ -113,7 +113,7 @@ namespace TagLib.Riff
 		///    Gets the tag types contained in the current instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="TagTypes.RiffInfo" />.
+		///    Always <see cref="TagLib.TagTypes.RiffInfo" />.
 		/// </value>
 		public override TagTypes TagTypes {
 			get { return TagTypes.RiffInfo; }
@@ -145,14 +145,14 @@ namespace TagLib.Riff
 		/// <summary>
 		///    Gets and sets a short description of the media.
 		///    For a music, this could be the comment that the artist
-		///    made of its artwork. For a video, this should be a 
+		///    made of its artwork. For a video, this should be a
 		///    short summary of the story/plot, but a spoiler. This
 		///    should give the impression of what to expect in the
 		///    media.
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the subtitle
-		///    the media represented by the current instance 
+		///    the media represented by the current instance
 		///    or an empty array if no value is present.
 		/// </value>
 		/// <remarks>
@@ -259,7 +259,7 @@ namespace TagLib.Riff
 		///    instance or <see langword="null" /> if no value present.
 		/// </value>
 		/// <remarks>
-		///    This property is implemented using the "ICNM" 
+		///    This property is implemented using the "ICNM"
 		///    (Cinematographer) non-standard item.
 		/// </remarks>
 		public override string Conductor {

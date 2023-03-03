@@ -83,7 +83,7 @@ namespace TagLib.Gif
 		///    Gets the tag types contained in the current instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="TagTypes.GifComment" />.
+		///    Always <see cref="TagLib.TagTypes.GifComment" />.
 		/// </value>
 		public override TagTypes TagTypes {
 			get { return TagTypes.GifComment; }

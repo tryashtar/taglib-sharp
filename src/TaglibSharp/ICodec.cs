@@ -5,7 +5,7 @@
 //   Brian Nickel (brian.nickel@gmail.com)
 //
 // Copyright (C) 2007 Brian Nickel
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the
 // "Software"), to deal in the Software without restriction, including
@@ -13,10 +13,10 @@
 // distribute, sublicense, and/or sell copies of the Software, and to
 // permit persons to whom the Software is furnished to do so, subject to
 // the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be
 // included in all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 // EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
 // MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -110,7 +110,7 @@ namespace TagLib
 	/// </summary>
 	/// <remarks>
 	///    <para>When dealing with a <see cref="ICodec" />, if <see
-	///    cref="ICodec.MediaTypes" /> contains <see cref="MediaTypes.Audio"
+	///    cref="ICodec.MediaTypes" /> contains <see cref="TagLib.MediaTypes.Audio"
 	///    />, it is safe to assume that the object also inherits <see
 	///    cref="IAudioCodec" /> and can be recast without issue.</para>
 	/// </remarks>

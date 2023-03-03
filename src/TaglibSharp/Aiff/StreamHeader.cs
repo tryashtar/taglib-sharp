@@ -66,7 +66,7 @@ namespace TagLib.Aiff
 		/// </summary>
 		/// <remarks>
 		///    This value is stored in bytes (17-26).
-		///    the sample rate at which the sound is to be played back, 
+		///    the sample rate at which the sound is to be played back,
 		///    in sample frames per second
 		/// </remarks>
 		readonly ulong sample_rate;
@@ -120,7 +120,7 @@ namespace TagLib.Aiff
 		/// </exception>
 		/// <exception cref="CorruptFileException">
 		///    <paramref name="data" /> does not begin with <see
-		///    cref="FileIdentifier" /> 
+		///    cref="FileIdentifier" />
 		/// </exception>
 		public StreamHeader (ByteVector data, long streamLength)
 		{
@@ -216,7 +216,7 @@ namespace TagLib.Aiff
 		///    instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="MediaTypes.Audio" />.
+		///    Always <see cref="TagLib.MediaTypes.Audio" />.
 		/// </value>
 		public MediaTypes MediaTypes {
 			get { return MediaTypes.Audio; }

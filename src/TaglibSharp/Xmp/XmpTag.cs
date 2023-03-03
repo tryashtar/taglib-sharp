@@ -614,7 +614,7 @@ namespace TagLib.Xmp
 		///    Gets the tag types contained in the current instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="TagTypes.XMP" />.
+		///    Always <see cref="TagLib.TagTypes.XMP" />.
 		/// </value>
 		public override TagTypes TagTypes {
 			get { return TagTypes.XMP; }

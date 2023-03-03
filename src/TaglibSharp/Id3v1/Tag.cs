@@ -9,7 +9,7 @@
 //
 // Copyright (C) 2005-2007 Brian Nickel
 // Copyright (C) 2002,2003 Scott Wheeler (Original Implementation)
-// 
+//
 // This library is free software; you can redistribute it and/or modify
 // it  under the terms of the GNU Lesser General Public License version
 // 2.1 as published by the Free Software Foundation.
@@ -280,7 +280,7 @@ namespace TagLib.Id3v1
 		///    Gets the tag types contained in the current instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="TagTypes.Id3v1" />.
+		///    Always <see cref="TagLib.TagTypes.Id3v1" />.
 		/// </value>
 		public override TagTypes TagTypes {
 			get { return TagTypes.Id3v1; }

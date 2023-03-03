@@ -5,7 +5,7 @@
 //   Brian Nickel (brian.nickel@gmail.com)
 //
 // Copyright (C) 2006-2007 Brian Nickel
-// 
+//
 // This library is free software; you can redistribute it and/or modify
 // it  under the terms of the GNU Lesser General Public License version
 // 2.1 as published by the Free Software Foundation.
@@ -682,7 +682,7 @@ namespace TagLib.Mpeg4
 		///    Gets the tag types contained in the current instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="TagTypes.Apple" />.
+		///    Always <see cref="TagLib.TagTypes.Apple" />.
 		/// </value>
 		public override TagTypes TagTypes {
 			get { return TagTypes.Apple; }
@@ -711,12 +711,12 @@ namespace TagLib.Mpeg4
 		}
 
 		/// <summary>
-		///    Gets and sets a short description, one-liner. 
+		///    Gets and sets a short description, one-liner.
 		///    It represents the tagline of the Video/music.
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the subtitle
-		///    the media represented by the current instance 
+		///    the media represented by the current instance
 		///    or an empty array if no value is present.
 		/// </value>
 		/// <remarks>
@@ -736,14 +736,14 @@ namespace TagLib.Mpeg4
 		/// <summary>
 		///    Gets and sets a short description of the media.
 		///    For a music, this could be the comment that the artist
-		///    made of its artwork. For a video, this should be a 
+		///    made of its artwork. For a video, this should be a
 		///    short summary of the story/plot, but a spoiler. This
 		///    should give the impression of what to expect in the
 		///    media.
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the subtitle
-		///    the media represented by the current instance 
+		///    the media represented by the current instance
 		///    or an empty array if no value is present.
 		/// </value>
 		/// <remarks>
@@ -779,10 +779,10 @@ namespace TagLib.Mpeg4
 
 		/// <summary>
 		///    Gets and sets the Charaters for a video media, or
-		///    instruments played for music media. 
+		///    instruments played for music media.
 		///    This should match the <see cref="Performers"/> array (for
 		///    each person correspond one/more role). Several roles for
-		///    the same artist/actor can be made up with semicolons. 
+		///    the same artist/actor can be made up with semicolons.
 		///    For example, "Marty McFly; Marty McFly Jr.; Marlene McFly".
 		/// </summary>
 		/// <remarks>
@@ -1248,8 +1248,8 @@ namespace TagLib.Mpeg4
 		///    Gets and sets the date at which the tag has been written.
 		/// </summary>
 		/// <value>
-		///    A nullable <see cref="DateTime" /> object containing the 
-		///    date at which the tag has been written, or <see 
+		///    A nullable <see cref="DateTime" /> object containing the
+		///    date at which the tag has been written, or <see
 		///    langword="null" /> if no value present.
 		/// </value>
 		/// <remarks>
@@ -1306,7 +1306,7 @@ namespace TagLib.Mpeg4
 		///    A <see cref="T:string[]" /> containing the sort names for
 		///    the performers or artists who performed in the media
 		///    described by the current instance, or an empty array if
-		///    no value is present. 
+		///    no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "soar" box type.
@@ -1325,7 +1325,7 @@ namespace TagLib.Mpeg4
 		/// <value>
 		///    A <see cref="T:string[]" /> containing the sort names for
 		///    the Composers in the media described by the current instance,
-		///    or an empty array if no value is present. 
+		///    or an empty array if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "soar" box type.
@@ -1344,7 +1344,7 @@ namespace TagLib.Mpeg4
 		/// <value>
 		///    A <see cref="string" /> containing the sort names for
 		///    the Album Title in the media described by the current
-		///    instance, or null if no value is present. 
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "soal" box type.
@@ -1365,8 +1365,8 @@ namespace TagLib.Mpeg4
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the sort names for
-		///    the Track Title in the media described by the current 
-		///    instance, or null if no value is present. 
+		///    the Track Title in the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "sonm" box type.
@@ -1386,8 +1386,8 @@ namespace TagLib.Mpeg4
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicBrainz
-		///    ArtistID for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    ArtistID for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "dash"/"----" box type.
@@ -1409,8 +1409,8 @@ namespace TagLib.Mpeg4
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicBrainz
-		///    ReleaseGroupID for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    ReleaseGroupID for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "dash"/"----" box type.
@@ -1426,8 +1426,8 @@ namespace TagLib.Mpeg4
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicBrainz
-		///    ReleaseID for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    ReleaseID for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "dash"/"----" box type.
@@ -1443,8 +1443,8 @@ namespace TagLib.Mpeg4
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicBrainz
-		///    ReleaseArtistID for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    ReleaseArtistID for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "dash"/"----" box type.
@@ -1466,8 +1466,8 @@ namespace TagLib.Mpeg4
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicBrainz
-		///    TrackID for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    TrackID for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "dash"/"----" box type.
@@ -1483,8 +1483,8 @@ namespace TagLib.Mpeg4
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicBrainz
-		///    DiscID for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    DiscID for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "dash"/"----" box type.
@@ -1500,8 +1500,8 @@ namespace TagLib.Mpeg4
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicIP Puid
-		///    for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "dash"/"----" box type.
@@ -1517,8 +1517,8 @@ namespace TagLib.Mpeg4
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the AmazonID
-		///    for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "dash"/"----" box type.
@@ -1534,8 +1534,8 @@ namespace TagLib.Mpeg4
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicBrainz
-		///    ReleaseStatus for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    ReleaseStatus for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "dash"/"----" box type.
@@ -1551,8 +1551,8 @@ namespace TagLib.Mpeg4
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicBrainz
-		///    ReleaseType for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    ReleaseType for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "dash"/"----" box type.
@@ -1568,8 +1568,8 @@ namespace TagLib.Mpeg4
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicBrainz
-		///    ReleaseCountry for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    ReleaseCountry for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "dash"/"----" box type.
@@ -1715,8 +1715,8 @@ namespace TagLib.Mpeg4
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the InitialKey
-		///    for the media described by the current  instance, 
-		///    or null if no value is present. 
+		///    for the media described by the current  instance,
+		///    or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "dash"/"----" box type.
@@ -1731,8 +1731,8 @@ namespace TagLib.Mpeg4
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the ISRC
-		///    for the media described by the current  instance, 
-		///    or null if no value is present. 
+		///    for the media described by the current  instance,
+		///    or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "dash"/"----" box type.
@@ -1747,8 +1747,8 @@ namespace TagLib.Mpeg4
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the Publisher
-		///    for the media described by the current  instance, 
-		///    or null if no value is present. 
+		///    for the media described by the current  instance,
+		///    or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "dash"/"----" box type.
@@ -1763,8 +1763,8 @@ namespace TagLib.Mpeg4
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the Remixer
-		///    for the media described by the current  instance, 
-		///    or null if no value is present. 
+		///    for the media described by the current  instance,
+		///    or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "dash"/"----" box type.

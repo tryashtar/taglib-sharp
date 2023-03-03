@@ -192,7 +192,7 @@ namespace TagLib.Audible
 		/// </param>
 		/// <remarks>
 		///    In order to remove all tags from a file, pass <see
-		///    cref="TagTypes.AllTags" /> as <paramref name="types" />.
+		///    cref="TagLib.TagTypes.AllTags" /> as <paramref name="types" />.
 		/// </remarks>
 		/// <remarks>
 		/// 	Currently this does not work as there is not enough

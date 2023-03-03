@@ -874,13 +874,13 @@ namespace TagLib.Id3v2
 		/// </param>
 		/// <param name="file">
 		///    A <see cref="File"/> object containing
-		///    abstraction of the file to read. 
+		///    abstraction of the file to read.
 		///    Ignored if <paramref name="data"/> is not null.
 		/// </param>
 		/// <param name="position">
 		///    A <see cref="int" /> value reference specifying at what
 		///    index in <paramref name="file" />
-		///    at which the frame begins. 
+		///    at which the frame begins.
 		/// </param>
 		/// <param name="style">
 		///    A <see cref="ReadStyle"/> value specifying how the media
@@ -898,7 +898,7 @@ namespace TagLib.Id3v2
 			bool fullTagUnsynch = (header.MajorVersion < 4) &&
 				(header.Flags & HeaderFlags.Unsynchronisation) != 0;
 
-			// Avoid to load all the ID3 tag if PictureLazy enabled and size is 
+			// Avoid to load all the ID3 tag if PictureLazy enabled and size is
 			// significant enough (ID3v4 and later only)
 			if (data == null &&
 				(fullTagUnsynch ||
@@ -1245,7 +1245,7 @@ namespace TagLib.Id3v2
 		///    Gets the tag types contained in the current instance.
 		/// </summary>
 		/// <value>
-		///    Always <see cref="TagTypes.Id3v2" />.
+		///    Always <see cref="TagLib.TagTypes.Id3v2" />.
 		/// </value>
 		public override TagTypes TagTypes {
 			get { return TagTypes.Id3v2; }
@@ -1276,7 +1276,7 @@ namespace TagLib.Id3v2
 		/// <value>
 		///    A <see cref="string" /> containing the sort names for
 		///    the Title of the media described by the current instance,
-		///    or null if no value is present. 
+		///    or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "TSOT" Text
@@ -1289,20 +1289,20 @@ namespace TagLib.Id3v2
 
 
 		/// <summary>
-		///    Gets and sets a short description, one-liner. 
+		///    Gets and sets a short description, one-liner.
 		///    It represents the tagline of the Video/music.
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the subtitle
-		///    the media represented by the current instance 
+		///    the media represented by the current instance
 		///    or an empty array if no value is present.
 		/// </value>
 		/// <remarks>
-		///    <para>This field gives a nice/short precision to 
+		///    <para>This field gives a nice/short precision to
 		///    the title, which is typically below the title on the
 		///    front cover of a media.
-		///    For example, for "Back to the future", this would be 
-		///    "It's About Time". 
+		///    For example, for "Back to the future", this would be
+		///    "It's About Time".
 		///    </para>
 		/// </remarks>
 		/// <remarks>
@@ -1317,20 +1317,20 @@ namespace TagLib.Id3v2
 		/// <summary>
 		///    Gets and sets a short description of the media.
 		///    For a music, this could be the comment that the artist
-		///    made of its artwork. For a video, this should be a 
+		///    made of its artwork. For a video, this should be a
 		///    short summary of the story/plot, but a spoiler. This
 		///    should give the impression of what to expect in the
 		///    media.
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the subtitle
-		///    the media represented by the current instance 
+		///    the media represented by the current instance
 		///    or an empty array if no value is present.
 		/// </value>
 		/// <remarks>
 		///    <para>This is especially relevant for a movie.
 		///    For example, for "Back to the Future 2", this could be
-		///    "After visiting 2015, Marty McFly must repeat his visit 
+		///    "After visiting 2015, Marty McFly must repeat his visit
 		///    to 1955 to prevent disastrous changes to 1985...without
 		///    interfering with his first trip".
 		///    </para>
@@ -1368,7 +1368,7 @@ namespace TagLib.Id3v2
 		///    A <see cref="T:string[]" /> containing the sort names for
 		///    the performers or artists who performed in the media
 		///    described by the current instance, or an empty array if
-		///    no value is present. 
+		///    no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "TSOP" Text
@@ -1381,10 +1381,10 @@ namespace TagLib.Id3v2
 
 		/// <summary>
 		///    Gets and sets the Charaters for a video media, or
-		///    instruments played for music media. 
+		///    instruments played for music media.
 		///    This should match the <see cref="Performers"/> array (for
 		///    each person correspond one/more role). Several roles for
-		///    the same artist/actor can be made up with semicolons. 
+		///    the same artist/actor can be made up with semicolons.
 		///    For example, "Marty McFly; Marty McFly Jr.; Marlene McFly".
 		/// </summary>
 		/// <remarks>
@@ -1392,18 +1392,18 @@ namespace TagLib.Id3v2
 		///    instrument played by each artist in a music may be of
 		///    relevance.
 		///    </para>
-		///    <para>It is highly important to match each role to the 
-		///    performers. This means that a role may be <see 
+		///    <para>It is highly important to match each role to the
+		///    performers. This means that a role may be <see
 		///    langword="null"/> to keep the match between a
 		///    Performers[i] and PerformersRole[i].
 		///    </para>
 		/// </remarks>
 		/// <remarks>
 		///    This property is implemented using the "TMCL" Text
-		///    Information Frame: The 'Musician credits list' is 
-		///    intended as a mapping between instruments and the 
-		///    musician that played it.Every odd field is an 
-		///    instrument and every even is an artist or a comma 
+		///    Information Frame: The 'Musician credits list' is
+		///    intended as a mapping between instruments and the
+		///    musician that played it.Every odd field is an
+		///    instrument and every even is an artist or a comma
 		///    delimited list of artists.
 		/// </remarks>
 		public override string[] PerformersRole {
@@ -1451,7 +1451,7 @@ namespace TagLib.Id3v2
 
 
 		/// <summary>
-		///    Gets and sets the sort names of the band or artist who is 
+		///    Gets and sets the sort names of the band or artist who is
 		///    credited in the creation of the entire album or collection
 		///    containing the media described by the current instance.
 		/// </summary>
@@ -1459,7 +1459,7 @@ namespace TagLib.Id3v2
 		///    A <see cref="T:string[]" /> containing the sort names for
 		///    the performers or artists who performed in the media
 		///    described by the current instance, or an empty array if
-		///    no value is present. 
+		///    no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "TSO2" Text
@@ -1516,7 +1516,7 @@ namespace TagLib.Id3v2
 		///    A <see cref="T:string[]" /> containing the sort names for
 		///    the performers or artists who performed in the media
 		///    described by the current instance, or an empty array if
-		///    no value is present. 
+		///    no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "TSOC" Text
@@ -1552,7 +1552,7 @@ namespace TagLib.Id3v2
 		/// <value>
 		///    A <see cref="string" /> containing the sort names for
 		///    the Title in the media described by the current instance,
-		///    or null if no value is present. 
+		///    or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "TSOA" Text
@@ -1889,8 +1889,8 @@ namespace TagLib.Id3v2
 		///    Gets and sets the date at which the tag has been written.
 		/// </summary>
 		/// <value>
-		///    A nullable <see cref="DateTime" /> object containing the 
-		///    date at which the tag has been written, or <see 
+		///    A nullable <see cref="DateTime" /> object containing the
+		///    date at which the tag has been written, or <see
 		///    langword="null" /> if no value present.
 		/// </value>
 		/// <remarks>
@@ -1923,8 +1923,8 @@ namespace TagLib.Id3v2
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicBrainz
-		///    ArtistID for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    ArtistID for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "TXXX:MusicBrainz Artist Id" frame.
@@ -1940,8 +1940,8 @@ namespace TagLib.Id3v2
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicBrainz
-		///    ReleaseGroupID for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    ReleaseGroupID for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "TXXX:MusicBrainz Release Group Id" frame.
@@ -1957,8 +1957,8 @@ namespace TagLib.Id3v2
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicBrainz
-		///    ReleaseID for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    ReleaseID for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "TXXX:MusicBrainz Album Id" frame.
@@ -1974,8 +1974,8 @@ namespace TagLib.Id3v2
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicBrainz
-		///    ReleaseArtistID for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    ReleaseArtistID for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "TXXX:MusicBrainz Album Artist Id" frame.
@@ -1991,8 +1991,8 @@ namespace TagLib.Id3v2
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicBrainz
-		///    TrackID for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    TrackID for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "UFID:http://musicbrainz.org" frame.
@@ -2008,8 +2008,8 @@ namespace TagLib.Id3v2
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicBrainz
-		///    DiscID for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    DiscID for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "TXXX:MusicBrainz Disc Id" frame.
@@ -2025,8 +2025,8 @@ namespace TagLib.Id3v2
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicIP PUID
-		///    for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "TXXX:MusicIP PUID" frame.
@@ -2042,8 +2042,8 @@ namespace TagLib.Id3v2
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the Amazon Id
-		///    for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "TXXX:ASIN" frame.
@@ -2059,8 +2059,8 @@ namespace TagLib.Id3v2
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicBrainz
-		///    ReleaseStatus for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    ReleaseStatus for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "TXXX:MusicBrainz Album Status" frame.
@@ -2076,8 +2076,8 @@ namespace TagLib.Id3v2
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicBrainz
-		///    ReleaseType for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    ReleaseType for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "TXXX:MusicBrainz Album Type" frame.
@@ -2093,8 +2093,8 @@ namespace TagLib.Id3v2
 		/// </summary>
 		/// <value>
 		///    A <see cref="string" /> containing the MusicBrainz
-		///    ReleaseCountry for the media described by the current 
-		///    instance, or null if no value is present. 
+		///    ReleaseCountry for the media described by the current
+		///    instance, or null if no value is present.
 		/// </value>
 		/// <remarks>
 		///    This property is implemented using the "TXXX:MusicBrainz Album Release Country" frame.
